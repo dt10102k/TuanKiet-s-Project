@@ -34,8 +34,10 @@ number of hosts available: 2^m - 2 (network address and broadcast)
 The jump between networks: 2^8 - n ( The value of the hop is used to determine the next Network.)
 
 ** Local Area Network **
-LAN stands for Local Area Network, roughly translated as local computer network, this interface allows computers to connect to each other to work together and share data. This connection is made via a LAN cable or Wifi (wireless) in a narrow space, so it can only be used in a limited range such as offices, homes, schools... 
-The range is limited to a few meters up to 1 km.
+A local area network (LAN) is a collection of devices connected together in one physical location, such as a building, office, or home. A LAN can be small or large, ranging from a home network with one user to an enterprise network with thousands of users and devices in an office or school.
+Regardless of size, a LAN's single defining characteristic is that it connects devices that are in a single, limited area.
+Ethernet and Wi-Fi are the two most common technologies in use for local area networks. 
+A LAN comprises cables, access points, switches, routers, and other components that enable devices to connect to internal servers, web servers, and other LANs via wide area networks. 
 Usually using a simple technique with only one cable (cable) connecting all machines. Typical data transfer rates are 10 Mbps, 100 Mbps, 1 Gbps, and more recently 100 Gbps.
 
 
@@ -56,4 +58,5 @@ A network switch (also called switching hub, bridging hub, and, by the IEEE, MAC
 
 A network switch is a multiport network bridge that uses MAC addresses to forward data at the data link layer (layer 2) of the OSI model. Some switches can also forward data at the network layer (layer 3) by additionally incorporating routing functionality. Such switches are commonly known as layer-3 switches or multilayer switches.
 
+** Domain Name System **
 
