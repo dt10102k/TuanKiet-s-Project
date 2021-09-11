@@ -1,0 +1,26 @@
+4. Cài đặt để remote desktop từ Laptop đến 2 máy Windows
+
+** At Windows 7 **
+- Let the machine connect to the Card NAT
+- enable Remote Desktop on Windows 7 computers
+- Now click on the link Advanced system settings.
+- Click the Remote tab and under the Remote Desktop section, check the box for Allow connections from computers running any version (less secure).
+- You can also choose what users on the network will have Remote Desktop access to. For example, printers, folders, etc. or all permissions operate on the computer.
+- Go to "Computer Management" to create a user to log in => Select "Local users and Groups" => Right-click at "Users" => select New users and enter information.
+- Right-click Computer and select Properties to see the computer name so that you can enter it later
+
+** At Windows Server 2003 **
+- Let the machine connect to the Card NAT
+- Right-click on My Computer and select Properties, click on the Remote tab, and in the Remote Desktop section, click the box next to Allow users to connect remotely to this computer.
+- Go to "Computer Management" to create a user to log in => Select "Local users and Groups" => Right-click at "Users" => select New users and enter information.
+- Right-click Computer and select Properties to see the computer name so that you can enter it later
+
+** At Laptop **
+- Then open the Windows search bar and type remote desktop connection. This is the magnifying glass icon in the bottom-left corner of your screen.Do this from the client computer or the computer that you will use to establish the remote connection.
+- Next, click Open.
+- Then click Show Options. You can see this in the bottom-left corner of the window.
+- Next, enter the computer’s name. This is the name that you copied down in the previous steps.
+- Also, enter the username. If this information is filled in already, make sure it is correct. You can find your username by going to Settings > Accounts. Then you will see your username under your profile image.  
+- Then click Connect.
+- Next, enter your computer’s password and click OK. This is the password that you use to sign in to the computer when you are on the lock screen.
+- Finally, wait for the remote connection to be configured. After the step above, you will see a green progress bar. Wait for it to complete. Briefly, you will see a black window which turns to blue. Once the remote connection is successfully established, you will see a view of the computer you’re trying to access. 

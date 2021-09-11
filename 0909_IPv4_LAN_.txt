@@ -1,0 +1,59 @@
+** IPv4 **
+Internet Protocol version 4 (IPv4) is the fourth version of the Internet Protocol (IP). It is one of the core protocols of standards-based internetworking methods in the Internet and other packet-switched networks. IPv4 was the first version deployed for production on SATNET in 1982 and on the ARPANET in January 1983. It is still used to route most Internet traffic today, despite the ongoing deployment of a successor protocol, IPv6.
+
+IPv4 uses a 32-bit address space which provides 4,294,967,296 (2^32) unique addresses.32 bits divided into 4 equal parts, each burst of 8 bits is an octet, then converted to decimal. Dots are used to separate octets from each other.
+
+IPv4 addresses consist of two parts: network-id and host-id. Network-id is the identifier for the network layer, host-id identifier for each device in that network layer.
+
+If the host part bits are also 0, we have a network address.
+If the host part bits are also 1, we have a broadcast address.
+
+** Subnet mask **
+The subnet mask is a 32-bit number created by setting all host bits to 0 and setting all network bits to 1.
+Grade A: 255.0.0.0 
+Class B: 255.255.0.0
+Class C: 255.255.255.0
+
+** Prefix-length **
+Another way to determine an IP address is to use a prefix - length number. The number of prefix - length is the number of network bits in an IP address. This value is written immediately after the IP address and separated by a "/".
+for example: 192.168.1.1/24
+             172.16.0.0/16
+	     10.0.0.0/8
+
+** IPv4 address classes **
+Class	
+A	1.0.0.0		126.0.0.0
+B	128.0.0.0	191.255.0.0
+C	192.0.0.0	223.255.255.0
+D	224.0.0.0	239.0.0.0
+
+** Formula to calculate IPv4 **
+n be the number of borrowed bits, m the number of host bits remaining after borrowing.
+number of subnets available: 2^n
+number of hosts available: 2^m - 2 (network address and broadcast)
+The jump between networks: 2^8 - n ( The value of the hop is used to determine the next Network.)
+
+** Local Area Network **
+LAN stands for Local Area Network, roughly translated as local computer network, this interface allows computers to connect to each other to work together and share data. This connection is made via a LAN cable or Wifi (wireless) in a narrow space, so it can only be used in a limited range such as offices, homes, schools... 
+The range is limited to a few meters up to 1 km.
+Usually using a simple technique with only one cable (cable) connecting all machines. Typical data transfer rates are 10 Mbps, 100 Mbps, 1 Gbps, and more recently 100 Gbps.
+
+
+** OSI model 7 layers **
+OSI, also known as "Open Systems Connection Reference Model", abbreviated as OSI Model or OSI Reference Model is a design based on the development of ISO (International Organization for Standardization) and IUT-T . The model includes 7 floors:
+
+Application layer (Layer 7): allows users (human or software) to access the network by providing a user interface, supporting services such as access e-mail and remote file transfer, shared database management and some other information services.
+Presentation layer (Layer 6): performs tasks related to the syntax and content of the information sent.
+Session layer (Layer 5): plays the role of "controller" of the network's conversation (dialog) with the task of establishing, maintaining and synchronizing the interaction between the two parties.
+Transport layer (Layer 4): receives data from the session layer, cuts them into smaller units if needed, sends them down to the network layer and checks that these units reach the receiver.
+Network layer (Layer 3): controls the operation of the subnet. Defines the beginning and end of a data transmission.
+Data link layer (Layer 2): the main task is to convert data into data frames according to algorithms for the purpose of detecting, adjusting and solving problems such as damage and loss. and duplicate data frames.
+Physical Layer (Layer 1): Performs the functions necessary to transmit a stream of data in the form of bits across physical media.
+
+** Switch and Router **
+A router is a networking device that forwards data packets between computer networks. Routers perform the traffic directing functions on the Internet. Data sent through the internet, such as a web page or email, is in the form of data packets. A packet is typically forwarded from one router to another router through the networks that constitute an internetwork (e.g. the Internet) until it reaches its destination node.
+A network switch (also called switching hub, bridging hub, and, by the IEEE, MAC bridge) is networking hardware that connects devices on a computer network by using packet switching to receive and forward data to the destination device.
+
+A network switch is a multiport network bridge that uses MAC addresses to forward data at the data link layer (layer 2) of the OSI model. Some switches can also forward data at the network layer (layer 3) by additionally incorporating routing functionality. Such switches are commonly known as layer-3 switches or multilayer switches.
+
+
