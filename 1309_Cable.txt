@@ -1,0 +1,63 @@
+** cat5,cat5e,cat6,cat7 **
+- Category 5: 
+Cat5 Ethernet, introduced 10/100 Mbps Ethernet over distances of up to 100 meters, also known as Fast Ethernet.
+NOTE: 100 Mbps /100m.
+
+- Category 5e:
+Though Cat5 and Cat5e cables are physically similar, Category 5e Ethernet adheres to more stringent IEEE standards. “E” is for enhanced, meaning a lower-noise version where the potential for crosstalk is reduced. Crosstalk is interference that transfers from adjacent wires.   
+Even though both Cat5 and Cat5e support a maximum frequency of up to 100MHz, Cat5e has completely replaced its predecessor. 
+Further, Cat 5e supports speeds of up to 1000 Mbps. It’s flexible enough for small space installations like residences, though it is still used in commercial spaces. Of all the current cabling options, Cat5e is your least expensive option.
+NOTE: 100-250Mhz/1 Gbps/100m.
+
+- Category 6
+Cat6 wiring can support up to 10 Gbps and frequencies of up to 250 MHz.
+Even though Cat6 and Cat6a cabling offer higher performance rates, many LANs still opt for CAT5e due to its cost-effectiveness and ability to support Gigabit speeds.
+NOTE: 250-500Mhz/10 Gbps /100m.
+
+- Category 7
+Category 7
+Cat7 can also support 10 Gbps, but laboratory testing has successfully shown its ability to transmit up to 40 Gb at 50 meters and even 100 Gb at 15 meters. The newer “Class F” cabling can support frequencies of up to 600 Mhz.
+Cat7 is suited for use in datacenters and large enterprise networks.
+Note: 600Mhz/10Gbps/100m (40Gbps at 50m/100Gbps at 15m).
+
+** T568A and T568B **
+Click on T568A: This type is used to connect 2 other devices to type together. (PC + Switch, Switch + Router RJ-45 Jack Tia / EIA 568A Standard) is called standard A.
+
+T568A: 1. White green 2. green 3. white orange 4. blue 5. blue blue 6. orange 7. white brown 8. brown
+
+Cross-clicking T568B: This is called standard B used to connect 2 similar devices such as (Switch - Switch, PC-PC ...)
+
+T568B: 1. White orange 2. orange 3. white green 4. blue 5. blue blue 6. green 7. white brown 8. brown.
+
+** Default gateway**
+A default gateway is the node in a computer network using the Internet protocol suite that serves as the forwarding host (router) to other networks when no other route specification matches the destination IP address of a packet.
+
+** NAT **
+Network address translation (NAT) is a method of mapping an IP address space into another by modifying network address information in the IP header of packets while they are in transit across a traffic routing device. The technique was originally used to avoid the need to assign a new address to every host when a network was moved, or when the upstream Internet service provider was replaced, but could not route the networks address space. It has become a popular and essential tool in conserving global address space in the face of IPv4 address exhaustion. One Internet-routable IP address of a NAT gateway can be used for an entire private network.
+
+As network address translation modifies the IP address information in packets, NAT implementations may vary in their specific behavior in various addressing cases and their effect on network traffic. The specifics of NAT behavior are not commonly documented by vendors of equipment containing NAT implementations.
+
+** Bridge **
+A network bridge is a computer networking device that creates a single, aggregate network from multiple communication networks or network segments. This function is called network bridging. Bridging is distinct from routing. Routing allows multiple networks to communicate independently and yet remain separate, whereas bridging connects two separate networks as if they were a single network. In the OSI model, bridging is performed in the data link layer (layer 2). If one or more segments of the bridged network are wireless, the device is known as a wireless bridge.
+
+The main types of network bridging technologies are simple bridging, multiport bridging, and learning or transparent bridging.
+
+** Ping **
+Ping is a computer network administration software utility used to test the reachability of a host on an Internet Protocol (IP) network. It is available for virtually all operating systems that have networking capability, including most embedded network administration software.
+
+Ping measures the round-trip time for messages sent from the originating host to a destination computer that are echoed back to the source. The name comes from active sonar terminology that sends a pulse of sound and listens for the echo to detect objects under water.
+
+Ping operates by sending Internet Control Message Protocol (ICMP) echo request packets to the target host and waiting for an ICMP echo reply. The program reports errors, packet loss, and a statistical summary of the results, typically including the minimum, maximum, the mean round-trip times, and standard deviation of the mean.
+
+The command-line options of the ping utility and its output vary between the numerous implementations. Options may include the size of the payload, count of tests, limits for the number of network hops (TTL) that probes traverse, interval between the requests and time to wait for a response. Many systems provide a companion utility ping6, for testing on Internet Protocol version 6 (IPv6) networks, which implement ICMPv6.
+
+ping google.com > ping.txt
+ping /n 100 google.com
+
+** Nslookup **
+nslookup (from name server lookup) is a network administration command-line tool for querying the Domain Name System (DNS) to obtain the mapping between domain name and IP address, or other DNS records.
+nslookup 
+
+** Dig **
+yum install bind-utils
+dig google.com
