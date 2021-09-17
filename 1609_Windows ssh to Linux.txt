@@ -1,0 +1,91 @@
+dùng terminal trong windows SSH đến máy CentoS bằng keypair qua SSH
+
+Step 1: Check the connection
+- To check, press the Start + R key combination and then type cmd -> Enter. 
+- On the cmd window, type: ping <IP address>
+- If the ping is successful, you are connecting to the server.
+
+
+Step 2: Make SSH connection with password
+- You can connect SSH directly on your cmd window by typing the following command:
+--------------------------------------------------------------
+ssh <user>@<ip address>
+--------------------------------------------------------------
+
+
+Step 3: Generate key
+- On the windows cmd window type the command: ssh-keygen
+- Immediately on the terminal appeared some of the following requests:
+--------------------------------------------------------------
+Enter file in which to save the key (C:\Users\in/.ssh/id_rsa):
+--------------------------------------------------------------
+- You will enter the name of the key file. The directory where the key file is stored is the directory C:\Users\in/.ssh/id_rsa. If you do not enter anything, the file name will default to id_rsa.
+--------------------------------------------------------------
+Enter passphrase (empty for no passphrase):
+Enter the same passphrase again:
+--------------------------------------------------------------
+- Next is the passpharase for the key. This step will create an additional password to authenticate the key. If you do not want to enter the password, press Enter to skip.
+
+
+Step 4: Copy the public key to the server.
+- at cmd and just connected to the server by ssh, create a .ssh directory
+--------------------------------------------------------------
+[root@localhost ~]#mkdir .ssh
+--------------------------------------------------------------
+- file permissions
+--------------------------------------------------------------
+[root@localhost ~]#chmod 700 .ssh
+--------------------------------------------------------------
+- open another cmd and copy the file id_rsa.pub to the linux server
+--------------------------------------------------------------
+C:\Users\DELL>scp "C:\Users\DELL\.ssh\id_rsa.pub" root@192.168.1.128:~/.ssh
+root@192.168.1.128's password:
+id_rsa.pub                                                                            100%  403   180.4KB/s   00:00
+--------------------------------------------------------------
+- via linux server go to the .ssh directory and enter the command " ls -al " to check if the folder has been copied from the windows machine
+--------------------------------------------------------------
+[root@localhost ~]# cd .ssh
+[root@localhost .ssh]# ls -al
+total 4
+drwx------. 2 root root  24 Sep 17 02:45 .
+dr-xr-x---. 3 root root 147 Sep 17 00:51 ..
+-rw-r--r--. 1 root root 403 Sep 17 02:45 id_rsa.pub
+--------------------------------------------------------------
+- Append the contents of the existing file with the >> symbol. Here, the contents of the id_rsa.pub file will be added to the end of the authorized_keys file.
+--------------------------------------------------------------
+[root@localhost .ssh]# cat id_rsa.pub >> authorized_keys
+[root@localhost .ssh]# ls -al
+total 8
+drwx------. 2 root root  47 Sep 17 02:47 .
+dr-xr-x---. 3 root root 147 Sep 17 00:51 ..
+-rw-r--r--. 1 root root 403 Sep 17 02:47 authorized_keys
+-rw-r--r--. 1 root root 403 Sep 17 02:45 id_rsa.pub
+--------------------------------------------------------------
+- authorize the authorized_keys file and delete the id_rsa.pub file
+--------------------------------------------------------------
+[root@localhost .ssh]# chmod 700 authorized_keys
+[root@localhost .ssh]# rm id_rsa.pub
+rm: remove regular file ‘id_rsa.pub’? yes
+--------------------------------------------------------------
+
+
+Step 5: Turn off password login.
+--------------------------------------------------------------
+[root@localhost ~]#vi /etc/ssh/sshd_config
+--------------------------------------------------------------
+- In that file, find the PasswordAuthentication line and change it to NO.
+--------------------------------------------------------------
+PasswordAuthentication no
+--------------------------------------------------------------
+- Then type ESC -> :wq to exit. Proceed to restart sshd:
+--------------------------------------------------------------
+[root@localhost ~]#sudo systemctl restart sshd.service
+--------------------------------------------------------------
+
+
+Step 6: Proceed to login.
+- After copying the public key, you can proceed to connect without asking for a password as follows:
+--------------------------------------------------------------
+ssh <user>@<ip address>
+--------------------------------------------------------------
+
