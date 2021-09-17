@@ -1,5 +1,7 @@
 dùng terminal trong windows SSH đến máy CentoS bằng keypair qua SSH
 
+video reference: https://www.youtube.com/watch?v=ORks4JXxJp0
+
 Step 1: Check the connection
 - To check, press the Start + R key combination and then type cmd -> Enter. 
 - On the cmd window, type: ping <IP address>
