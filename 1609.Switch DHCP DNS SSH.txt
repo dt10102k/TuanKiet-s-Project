@@ -1,0 +1,18 @@
+** Switch Layer 2 **
+Layer-2 switching uses the MAC address of the host's network interface cards (NICs) to decide where to forward frames. Layer 2 switching is hardware-based, which means switches use application-specific integrated circuit (ASICs) to build and maintain the Forwarding information base and to perform packet forwarding at wire speed. One way to think of a layer-2 switch is as multiport bridge.
+
+** Swicth Layer 3 **
+A layer-3 switch can perform some or all of the functions normally performed by a router. Most network switches, however, are limited to supporting a single type of physical network, typically Ethernet, whereas a router may support different kinds of physical networks on different ports.
+
+Layer-3 switching is solely based on (destination) IP address stored in the header of IP datagram (layer-4 switching may use other information in the header). The difference between a layer-3 switch and a router is the way the device is making the routing decision. Traditionally, routers use microprocessors to make forwarding decisions in software, while the switch performs only hardware-based packet switching (by specialized ASIC with the help of content-addressable memory). However, many routers now also have advanced hardware functions to assist with forwarding.
+
+** DHCP **
+The Dynamic Host Configuration Protocol (DHCP) is a network management protocol used on Internet Protocol (IP) networks for automatically assigning IP addresses and other communication parameters to devices connected to the network using a client–server architecture.
+
+** DNS **
+The Domain Name System (DNS) is a hierarchical and decentralized naming system for computers, services, or other resources connected to the Internet or a private network. It associates various information with domain names assigned to each of the participating entities. Most prominently, it translates more readily memorized domain names to the numerical IP addresses needed for locating and identifying computer services and devices with the underlying network protocols.
+
+** SSH **
+Secure Shell (SSH) is a cryptographic network protocol for operating network services securely over an unsecured network. Typical applications include remote command-line, login, and remote command execution, but any network service can be secured with SSH. The standard TCP port for SSH is 22.
+
+SSH is generally used to access Unix-like operating systems, but it can also be used on Microsoft Windows. Windows 10 uses OpenSSH as its default SSH client and SSH server.
