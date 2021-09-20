@@ -1,0 +1,25 @@
+** HTTP **
+The Hypertext Transfer Protocol (HTTP) is an application layer protocol in the Internet protocol suite model for distributed, collaborative, hypermedia information systems.[1] HTTP is the foundation of data communication for the World Wide Web, where hypertext documents include hyperlinks to other resources that the user can easily access, for example by a mouse click or by tapping the screen in a web browser.
+
+https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol
+
+
+** HTTPS **
+Hypertext Transfer Protocol Secure (HTTPS) is an extension of the Hypertext Transfer Protocol (HTTP). It is used for secure communication over a computer network, and is widely used on the Internet. In HTTPS, the communication protocol is encrypted using Transport Layer Security (TLS) or, formerly, Secure Sockets Layer (SSL). The protocol is therefore also referred to as HTTP over TLS, or HTTP over SSL.
+
+https://en.wikipedia.org/wiki/HTTPS
+
+
+** Telnet **
+Telnet is an application protocol used on the Internet or local area network to provide a bidirectional interactive text-oriented communication facility using a virtual terminal connection. User data is interspersed in-band with Telnet control information in an 8-bit byte oriented data connection over the Transmission Control Protocol (TCP).
+The name stands for "teletype network".
+Historically, Telnet provided access to a command-line interface on a remote host.
+
+https://en.wikipedia.org/wiki/Telnet
+
+
+**  Primary DNS Server & Secondary DNS Server **
+A primary server is a server that stores the original copies of all zone records. A secondary server uses a special automatic updating mechanism in the DNS protocol in communication with its primary to maintain an identical copy of the primary records.
+
+https://en.wikipedia.org/wiki/Domain_Name_System
+https://datatracker.ietf.org/doc/html/rfc2182
